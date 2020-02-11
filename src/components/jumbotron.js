@@ -11,5 +11,4 @@ export default () => (
         <p>
             <Button variant="primary">Learn more</Button>
         </p>
-    </Jumbotron>
 )
