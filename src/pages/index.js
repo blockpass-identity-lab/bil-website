@@ -1,3 +1,11 @@
 import React from "react"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Jumbotron from '../components/jumbotron'
 
-export default () => <div>Bil-Website First Commit (Master Branch)</div>
+export default () => 
+(
+    <div>
+        <Jumbotron />
+    </div>
+    
+)
