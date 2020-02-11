@@ -12,16 +12,18 @@ Requirements:
 
     #Deployment enabling the client to easily post/edit content on the website (public events calender, upload projects and publications).
 
-Git commands for Pulling/Pushing: 
+Git steps for Pulling/Pushing: 
 
-	# • Begin by going into personal branch Git checkout (name of branch) 
+	# begin by going into local folder and personal branch - git checkout (branchname) 
 
-	  • Git pull origin master
+	# git pull origin master
 
-	  • Make changes 
+	# make changes to your local files
 
-	  • Git add . 
+	#git fetch origin master
 
-	  • Git commit -m “your changes message” 
+	#git add . 
 
-	  • Git push
+	#git commit -m “your changes message” 
+
+	#git push origin master
