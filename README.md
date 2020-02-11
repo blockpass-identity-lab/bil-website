@@ -11,3 +11,17 @@ Requirements:
     #Pull data from worktribe and profile info of lab members (API functionality). Also a Twitter feed.
 
     #Deployment enabling the client to easily post/edit content on the website (public events calender, upload projects and publications).
+
+Git commands for Pulling/Pushing: 
+
+	# • Begin by going into personal branch Git checkout (name of branch) 
+
+	  • Git pull origin master
+
+	  • Make changes 
+
+	  • Git add . 
+
+	  • Git commit -m “your changes message” 
+
+	  • Git push
