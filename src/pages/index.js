@@ -1,18 +1,18 @@
 import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
-import Navigationbar from "../components/Navbar"
-import Jumbo from '../components/jumbotron'
-import Worktribe from "../components/Worktribe_container"
-import Events from "../components/Events_section"
-import Footer from "../components/Footer"
-import Header from "../components/header"
+// import Navigationbar from "../components/Navbar"
+// import Jumbo from '../components/jumbotron'
+// import Worktribe from "../components/Worktribe_container"
+// import Events from "../components/Events_section"
+// import Footer from "../components/Footer"
+// import Header from "../components/header"
 
 // export default () => <div>Bil-Website First Commit (Leonidas Zoidis)</div>
 
 export default () => (
   <div>
     {/* Navbar */}
-    <Header />
+    {/* <Header />
     <Navigationbar />
     <Jumbo />
     <div class="container-fluid mt-0 bg-light p-5">
@@ -34,6 +34,6 @@ export default () => (
     </div>
     <Worktribe />
     <Events />
-    <Footer></Footer>
+    <Footer></Footer> */}
   </div>
 )
