@@ -1,8 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 
-export default props => (
-  <div class="container-fluid bg-light">
+const Events = () => {
+  return (
+    <div class="container-fluid bg-light">
     <div class="row">
       <div class="col-md-11 offset-1 p-5">
         <h1>Our Latest Events</h1>
@@ -20,4 +21,7 @@ export default props => (
       </div>
     </div>
   </div>
-)
+  )
+}
+
+export default Events

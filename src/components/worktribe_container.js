@@ -1,7 +1,7 @@
 import React from "react"
 
 
-const Worktribe_container = () =>{
+const Worktribe = () =>{
   return (
     <div style={{ background: `red` }} class="container-fluid bg-light">
     <div class="row">
@@ -13,4 +13,4 @@ const Worktribe_container = () =>{
   </div>
   )
 }
-export default Worktribe_container
+export default Worktribe

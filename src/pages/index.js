@@ -2,8 +2,8 @@ import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Navigationbar from "../components/Navbar"
 import Jumbo from '../components/jumbotron'
-import Worktribe_container from "../components/Worktribe_container"
-import Events_section from "../components/Events_section"
+import Worktribe from "../components/Worktribe_container"
+import Events from "../components/Events_section"
 import Footer from "../components/Footer"
 
 // export default () => <div>Bil-Website First Commit (Leonidas Zoidis)</div>
@@ -30,8 +30,8 @@ export default () => (
         </div>
       </div>
     </div>
-    <Worktribe_container></Worktribe_container>
-    <Events_section></Events_section>
+    <Worktribe />
+    <Events />
     <Footer></Footer>
   </div>
 )
