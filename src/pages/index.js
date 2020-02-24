@@ -12,8 +12,8 @@ import "bootstrap/dist/css/bootstrap.min.css"
 export default () => (
   <div>
     {/* Navbar */}
-    {/* <Header />
-    <Navigationbar />
+     <Header />
+    {/*<Navigationbar />
     <Jumbo />
     <div class="container-fluid mt-0 bg-light p-5">
       <div class="row">
