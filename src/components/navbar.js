@@ -1,19 +1,12 @@
 import React from "react"
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-} from "react-bootstrap"
+import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap"
 
 export default props => (
-  <Navbar bg="light" expand="lg">
+  <Navbar bg="light-1" expand="lg">
     <Navbar.Brand href="#home">Blockpass Identity Lab</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="mr-auto">
+      <Nav className="ml-auto mr-5">
         <Nav.Link href="#home">Home</Nav.Link>
         <Nav.Link href="#link">About</Nav.Link>
         <Nav.Link href="#link2">Team</Nav.Link>
@@ -27,10 +20,6 @@ export default props => (
           <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
         </NavDropdown>
       </Nav>
-      <Form inline>
-        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-        <Button variant="outline-success">Search</Button>
-      </Form>
     </Navbar.Collapse>
   </Navbar>
 )
