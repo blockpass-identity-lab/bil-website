@@ -1,7 +1,7 @@
 import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
-import Navbar from "../components/Navbar"
-import Jumbotron from '../components/jumbotron'
+import Navigationbar from "../components/Navbar"
+import Jumbo from '../components/jumbotron'
 import Worktribe_container from "../components/Worktribe_container"
 import Events_section from "../components/Events_section"
 import Footer from "../components/Footer"
@@ -10,8 +10,8 @@ import Footer from "../components/Footer"
 
 export default () => (
   <div>
-    <Navbar></Navbar>
-    <Jumbotron />
+    <Navigationbar />
+    <Jumbo />
     <div class="container-fluid mt-0 bg-light p-5">
       <div class="row">
         <div class="col-md-11 offset-1 ">

@@ -1,7 +1,9 @@
 import React from "react"
 
-export default props => (
-  <div style={{ background: `red` }} class="container-fluid bg-light">
+
+const Worktribe_container = () =>{
+  return (
+    <div style={{ background: `red` }} class="container-fluid bg-light">
     <div class="row">
       <div class="col-md-11 offset-1 p-5">
         <h1>Worktribe Section</h1>
@@ -9,4 +11,6 @@ export default props => (
       </div>
     </div>
   </div>
-)
+  )
+}
+export default Worktribe_container

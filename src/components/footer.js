@@ -1,8 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 
-export default props => (
-  <div class="card mt-5">
+
+const Footer = () => {
+  return (
+    <div class="card mt-5">
     <div class="card-header">Footer</div>
     <div class="card-body">
       <h5 class="card-title">Special title treatment</h5>
@@ -14,4 +16,7 @@ export default props => (
       </a>
     </div>
   </div>
-)
+  )
+}
+
+export default Footer

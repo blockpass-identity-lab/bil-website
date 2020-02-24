@@ -1,8 +1,10 @@
 import React from "react"
 import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap"
 
-export default props => (
-  <Navbar bg="light-1" expand="lg">
+
+const Navigationbar = () => {
+  return (
+    <Navbar bg="light-1" expand="lg">
     <Navbar.Brand href="#home">Blockpass Identity Lab</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
@@ -22,4 +24,7 @@ export default props => (
       </Nav>
     </Navbar.Collapse>
   </Navbar>
-)
+  )
+}
+
+export default Navigationbar 
