@@ -6,7 +6,11 @@
 
 module.exports = {
   /* Your site config here */
+  // Plugins
   plugins: [
+    // Contentful source plugin
+    // This plugin allows this website to source data from contentful CMS
+    // The spaceID and accessToken are exposed but will be hidden in an .env file in the future
     {
       resolve: 'gatsby-source-contentful',
       options: {
