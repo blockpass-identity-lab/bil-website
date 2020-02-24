@@ -10,6 +10,7 @@ import Footer from "../components/Footer"
 
 export default () => (
   <div>
+    {/* Navbar */}
     <Navigationbar />
     <Jumbo />
     <div class="container-fluid mt-0 bg-light p-5">
