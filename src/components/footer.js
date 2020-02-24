@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+
 
 
 const Footer = () => {
@@ -11,9 +11,9 @@ const Footer = () => {
       <p class="card-text">
         With supporting text below as a natural lead-in to additional content.
       </p>
-      <a href="#" class="btn btn-primary">
+      {/* <a href="#" class="btn btn-primary">
         Go somewhere
-      </a>
+      </a> */}
     </div>
   </div>
   )

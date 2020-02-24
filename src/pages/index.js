@@ -5,12 +5,14 @@ import Jumbo from '../components/jumbotron'
 import Worktribe from "../components/Worktribe_container"
 import Events from "../components/Events_section"
 import Footer from "../components/Footer"
+import Header from "../components/header"
 
 // export default () => <div>Bil-Website First Commit (Leonidas Zoidis)</div>
 
 export default () => (
   <div>
     {/* Navbar */}
+    <Header />
     <Navigationbar />
     <Jumbo />
     <div class="container-fluid mt-0 bg-light p-5">
