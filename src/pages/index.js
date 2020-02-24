@@ -1,13 +1,10 @@
 import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Navbar from "../components/Navbar"
-<<<<<<< .merge_file_a14492
 import Jumbotron from '../components/jumbotron'
-=======
 import Worktribe_container from "../components/Worktribe_container"
 import Events_section from "../components/Events_section"
 import Footer from "../components/Footer"
->>>>>>> .merge_file_a15348
 
 // export default () => <div>Bil-Website First Commit (Leonidas Zoidis)</div>
 
