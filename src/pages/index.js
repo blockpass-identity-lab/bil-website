@@ -4,12 +4,14 @@ import Navbar from "../components/Navbar"
 import Worktribe_container from "../components/Worktribe_container"
 import Events_section from "../components/Events_section"
 import Footer from "../components/Footer"
+import Jumbotron from '../components/jumbotron'
 
 // export default () => <div>Bil-Website First Commit (Leonidas Zoidis)</div>
 
 export default () => (
   <div>
     <Navbar></Navbar>
+    <Jumbotron />
     <div class="container-fluid mt-0 bg-light p-5">
       <div class="row">
         <div class="col-md-11 offset-1 ">
