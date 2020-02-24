@@ -13,6 +13,7 @@ const Jumbo = () => {
                 <Button variant="primary">Learn more</Button>
             </p>
             </Jumbotron>
+            
         )
 }
 
