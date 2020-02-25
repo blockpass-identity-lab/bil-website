@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery, Link } from 'gatsby'
 
 const Events = () => {
 
@@ -18,25 +18,6 @@ const Events = () => {
   }
   `)
 
-  
-  //   <div class="container-fluid bg-light">
-  //   <div class="row">
-  //     <div class="col-md-11 offset-1 p-5">
-  //       <h1>Our Latest Events</h1>
-  //       <p class="font-weight-light">lorem ipsum dolor sit amet</p>
-  //     </div>
-  //   </div>
-  //   <div class="container-fluid bg-light">
-  //     <div class="row">
-  //       <div class="col-md-6 col-sm-12">
-  //         <h3 class="text-md-center">Latest Events</h3>
-  //       </div>
-  //       <div class="col-md-6 col-sm-12">
-  //         <h3 class="text-md-center">Calendar Events</h3>
-  //       </div>
-  //     </div>
-  //   </div>
-  // </div>
   return(
     <div>
       <h1>Events</h1>
@@ -46,8 +27,11 @@ const Events = () => {
           return (
             // List item with event
             <li>
-              <h2>{edge.node.eventTitle}</h2>
-              <p>{edge.node.eventDate}</p>
+              {/* link to the event's own page */}
+              <Link to={`/event/${edge.node.slug}`}>
+                <h2>{edge.node.eventTitle}</h2>
+                <p>{edge.node.eventDate}</p>
+              </Link>
             </li>
           )
         })}
