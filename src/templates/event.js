@@ -1,13 +1,18 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-// query to get specific event
+// this module renders rich text from contentful to react components
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
+// query to get specific event
 export const query = graphql`
     query($slug: String!) {
-        contentfulEvent(slug: $slug}) {
-            title
+        contentfulEvent(slug: {eq: $slug}) {
+            eventTitle
             eventDate(formatString: "MMMM Do, YYYY")
+            eventDescription{
+                json
+            }
         }
     }
 `
@@ -15,10 +20,25 @@ export const query = graphql`
 // Component
 
 const Event = (props) => {
+    const options = {
+        // override how nodes are rendered
+        renderNode: {
+            // Image rendering
+            "embedded-asset-block": (node) => {
+                const alt = node.data.target.fields.title['en-US']
+                const url = node.data.target.fields.file['en-US'].url
+                return <img alt={alt} src={url} />
+            }
+        }
+    }
+
     return(
         <div>
-            <h1>{props.data.contentfulEvent.title}</h1>
+            {/* grab and display contentful data here */}
+            <h1>{props.data.contentfulEvent.eventTitle}</h1>
             <p>{props.data.contentfulEvent.eventDate}</p>
+            {/* render rich text */}
+            {documentToReactComponents(props.data.contentfulEvent.eventDescription.json,options)}
         </div>
 
     )
