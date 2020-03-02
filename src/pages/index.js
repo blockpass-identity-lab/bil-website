@@ -1,15 +1,11 @@
 import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
-
-import Events from '../components/events'
-import Header from '../components/header'
-import Footer from '../components/footer'
-import Jumbo from '../components/jumbo'
-import Navigationbar from '../components/navigationbar'
-import Worktribe from '../components/worktribe'
-
-
-
+import Events from "../components/events"
+import Header from "../components/header"
+import Footer from "../components/footer"
+import Jumbo from "../components/jumbo"
+import Navigationbar from "../components/navigationbar"
+import Worktribe from "../components/worktribe"
 
 // export default () => <div>Bil-Website First Commit (Leonidas Zoidis)</div>
 
