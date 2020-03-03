@@ -13,10 +13,10 @@ export default () => (
     <Layout>
       <Header />
       <Jumbo />
-      <div class="container-fluid mt-0 bg-light p-5">
+      <div class="container-fluid mt-0 bg-light p-5 index">
         <div class="row">
           <div class="col-md-11 offset-1 ">
-            <h1>Gatsby Project</h1>
+            <h1>Background Information</h1>
             <p class="font-weight-light">
               A pioneering new research lab the{" "}
               <span class="font-weight-bold">Blockpass Identity Lab</span>
@@ -24,7 +24,7 @@ export default () => (
             <button type="button" class="btn btn-primary mr-4">
               View events
             </button>
-            <button type="button" class="btn btn-outline-primary mr-4 myButton">
+            <button type="button" class="btn btn-outline-primary mr-4">
               Learn more
             </button>
           </div>
@@ -33,6 +33,5 @@ export default () => (
       <Worktribe />
       <Events />
     </Layout>
-   
   </div>
 )

@@ -4,8 +4,8 @@ import { Jumbotron, Button } from "react-bootstrap"
 const Jumbo = () => {
   // Jumbotron Which will hold events
   return (
-    <Jumbotron>
-      <h1>BlockPass Identity Lab</h1>
+    <Jumbotron className="jumbo">
+      <h1 className ="border">Slider</h1>
       <p>
         This space will possibly be later occupied by current / recent events :)
       </p>
