@@ -4,11 +4,7 @@
 }
 
 h1 {
-  color: red;
-}
-
-.links {
-  color: white;
+  color: black;
 }
 
 .header {
@@ -17,8 +13,10 @@ h1 {
   background: url("../img/header_bg.jpg") no-repeat center center/cover;
   height: 50vh;
   color: white;
-  padding-top: 30px;
+  padding-top: 75px;
   border-top: 3px solid white;
+  border-bottom: 5px solid white;
+  margin: 0;
 }
 
 .logo {
@@ -36,4 +34,21 @@ h1 {
 
 .links {
   background-color: white;
+}
+
+.jumbo {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.events {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.index {
+  margin: 0;
+  padding: 0;
 }
