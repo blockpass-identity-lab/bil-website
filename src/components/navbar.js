@@ -1,11 +1,11 @@
 import React from "react"
-import { Navbar, Nav, NavDropdown } from "react-bootstrap"
+import { Navbar, Nav } from "react-bootstrap"
 
 const navbar = () => {
   return (
-    <div>
+    <div className="nav">
+      <Navbar.Brand href="/" className="logo"></Navbar.Brand>
       <Navbar bg="light-1" expand="lg">
-        <Navbar.Brand href="/">Blockpass Identity Lab</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto mr-5 links">
