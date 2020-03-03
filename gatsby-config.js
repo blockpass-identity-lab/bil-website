@@ -8,6 +8,7 @@ module.exports = {
   /* Your site config here */
   // Plugins
   plugins: [
+    'gatsby-plugin-sass',
     // Contentful source plugin
     // This plugin allows this website to source data from contentful CMS
     // The spaceID and accessToken are exposed but will be hidden in an .env file in the future

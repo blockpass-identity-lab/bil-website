@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 
 // this module renders rich text from contentful to react components
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import Layout from '../components/layout'
 
 // query to get specific event
 export const query = graphql`
@@ -33,13 +34,13 @@ const Event = (props) => {
     }
 
     return(
-        <div>
+        <Layout>
             {/* grab and display contentful data here */}
             <h1>{props.data.contentfulEvent.eventTitle}</h1>
             <p>{props.data.contentfulEvent.eventDate}</p>
             {/* render rich text */}
             {documentToReactComponents(props.data.contentfulEvent.eventDescription.json,options)}
-        </div>
+        </Layout>
 
     )
 }
