@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 // this module renders rich text from contentful to react components
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Layout from '../components/layout'
+import eventStyles from './event.module.scss'
 
 // query to get specific event
 export const query = graphql`
@@ -35,11 +36,16 @@ const Event = (props) => {
 
     return(
         <Layout>
-            {/* grab and display contentful data here */}
-            <h1>{props.data.contentfulEvent.eventTitle}</h1>
-            <p>{props.data.contentfulEvent.eventDate}</p>
-            {/* render rich text */}
-            {documentToReactComponents(props.data.contentfulEvent.eventDescription.json,options)}
+            <div className={ eventStyles.container }>
+                <div className={ eventStyles.content }>
+                    {/* grab and display contentful data here */}
+                    <h1>{props.data.contentfulEvent.eventTitle}</h1>
+                    <p>{props.data.contentfulEvent.eventDate}</p>
+                    {/* render rich text */}
+                    {documentToReactComponents(props.data.contentfulEvent.eventDescription.json,options)}
+                </div>
+            </div>
+
         </Layout>
 
     )
