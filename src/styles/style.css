@@ -2,12 +2,13 @@
   text-align: center;
   position: relative;
   background: url("../img/header_bg.jpg") no-repeat center center/cover;
-  height: 50vh;
+  height: 62vh;
   color: white;
   padding-top: 75px;
   border-top: 3px solid white;
   border-bottom: 3px solid white;
-  margin: 0;
+  margin: auto;
+  line-height: 2em;
 }
 
 .logo {
@@ -28,15 +29,12 @@
 }
 .content {
   color: white;
-  margin-top: 5vh;
-  text-align: left;
-}
-.index {
-  margin: 0;
-  padding: 0;
+  margin: auto;
+  padding: auto;
+  text-align: center;
+  margin-bottom: 5vh;
 }
 .events {
-  text-align: center;
   margin: auto;
   padding: auto;
   margin-top: -15px;
@@ -45,7 +43,7 @@
 .container {
   display: grid;
   grid-template-columns: repeat(2, 2fr);
-  margin-top: 7vh;
+  margin: auto;
 }
 
 .twitter-timeline {
@@ -60,8 +58,23 @@
   .twitter-timeline {
     margin-left: 48px;
   }
+  .header {
+    font-size: 1.75rem;
+  }
 }
 .btn {
   margin-right: 5vh;
   margin-top: 5vh;
+}
+
+.desc {
+  line-height: 2em;
+  margin-top: 10vh;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Oxanium&display=swap");
+
+h1,
+p {
+  font-family: "Oxanium", cursive;
 }

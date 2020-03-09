@@ -11,22 +11,22 @@ export default () => (
   <div class="bg-dark">
     <Layout>
       <Header />
-      <div class="container-fluid mt-0 bg-dark p-5 index">
-        <div class="row">
-          <div class="col-md-11 offset-1 content">
-            <h1>Background Information</h1>
-            <p class="font-weight-light">
-              A pioneering new research team the{" "}
-              <span class="font-weight-bold">Blockpass Identity Lab</span>
-            </p>
-            <button type="button" class="btn btn-outline-light">
-              View events
-            </button>
-            <button type="button" class="btn btn-outline-light">
-              Learn more
-            </button>
-          </div>
-        </div>
+      <div class="container-fluid mt-0 bg-dark p-5 content">
+        <h1>Blockpass Identity Lab</h1>
+        <p class="font-weight-light desc">
+          <span class="font-weight-bold">Blockpass Identity Lab </span> is a
+          collaboration between Blockpass IDN and Edinburgh Napier University
+          which was announced in April 2018. The initial scope of the
+          partnership is the creation of a pioneering new research lab, while
+          further developing methods to protect consumer identity and the right
+          of citizens to data privacy.
+        </p>
+        <button type="button" class="btn btn-outline-light">
+          View events
+        </button>
+        <button type="button" class="btn btn-outline-light">
+          Learn more
+        </button>
       </div>
       <div className="container">
         <Events />
