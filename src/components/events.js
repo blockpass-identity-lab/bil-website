@@ -22,7 +22,6 @@ const Events = () => {
 
   return (
     <div className="events">
-      <h1>Events</h1>
       <ol className={eventsStyles.events}>
         {/* Grabbing data from the query and iterating through it to display each event as a list item */}
         {data.allContentfulEvent.edges.map(edge => {

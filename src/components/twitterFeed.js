@@ -3,16 +3,15 @@ import React from "react"
 const Twitter = () => {
   return (
     <div>
-      <h3>Twitter</h3>
       <a
         class="twitter-timeline"
-        data-width="400"
-        data-height="600"
+        data-width="450"
+        data-height="630"
         data-dnt="true"
-        data-theme="light"
+        data-theme="dark"
         href="https://twitter.com/BlockpassIDLab?ref_src=twsrc%5Etfw"
       >
-        Tweets by MikeTyson
+        BlockpassIDLab
       </a>
     </div>
   )

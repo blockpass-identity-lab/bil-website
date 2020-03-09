@@ -13,7 +13,6 @@ export default () => (
   <div>
     <Layout>
       <Header />
-      <Jumbo />
       <div class="container-fluid mt-0 bg-light p-5 index">
         <div class="row">
           <div class="col-md-11 offset-1 ">
@@ -31,9 +30,12 @@ export default () => (
           </div>
         </div>
       </div>
+      <div className="container">
+        <Twitter />
+        <Events />
+      </div>
+      <Jumbo />
       <Worktribe />
-      <Twitter />
-      <Events />
     </Layout>
   </div>
 )
