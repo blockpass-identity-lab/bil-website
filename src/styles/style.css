@@ -41,14 +41,23 @@ h1 {
   padding: 0;
   text-align: center;
 }
-
-.events {
+.index {
   margin: 0;
   padding: 0;
+}
+.events {
   text-align: center;
+  margin: auto;
+  padding: auto;
+  margin-top: -15px;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  margin-top: 7vh;
 }
 
-.index {
+.twitter-timeline {
   margin: 0;
   padding: 0;
 }
