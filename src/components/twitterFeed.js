@@ -3,7 +3,7 @@ import React from "react"
 const Twitter = () => {
   return (
     <div>
-      <h3>Twitter Feed</h3>
+      <h3>Twitter</h3>
       <a
         class="twitter-timeline"
         data-width="400"
