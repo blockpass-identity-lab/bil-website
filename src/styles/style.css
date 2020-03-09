@@ -4,5 +4,51 @@
 }
 
 h1 {
-  color: pink;
+  color: black;
+}
+
+.header {
+  text-align: center;
+  position: relative;
+  background: url("../img/header_bg.jpg") no-repeat center center/cover;
+  height: 50vh;
+  color: white;
+  padding-top: 75px;
+  border-top: 3px solid white;
+  border-bottom: 5px solid white;
+  margin: 0;
+}
+
+.logo {
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 170px;
+  height: 65px;
+  background: url("../img/header_logo_white.png") no-repeat;
+}
+
+.nav {
+  background-color: black;
+}
+
+.links {
+  background-color: white;
+}
+
+.jumbo {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.events {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.index {
+  margin: 0;
+  padding: 0;
 }
