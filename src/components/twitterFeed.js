@@ -10,7 +10,7 @@ const Twitter = () => {
         data-height="600"
         data-dnt="true"
         data-theme="light"
-        href="https://twitter.com/MikeTyson?ref_src=twsrc%5Etfw"
+        href="https://twitter.com/BlockpassIDLab?ref_src=twsrc%5Etfw"
       >
         Tweets by MikeTyson
       </a>
