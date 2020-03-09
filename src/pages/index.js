@@ -18,13 +18,14 @@ export default () => (
           <div class="col-md-11 offset-1 ">
             <h1>Background Information</h1>
             <p class="font-weight-light">
-              A pioneering new research lab the{" "}
+              A pioneering new research team the{" "}
               <span class="font-weight-bold">Blockpass Identity Lab</span>
             </p>
-            <button type="button" class="btn btn-primary mr-4">
+            <button type="button" class="btn btn-outline-light">
+
               View events
             </button>
-            <button type="button" class="btn btn-outline-primary mr-4">
+            <button type="button" class="btn btn-outline-light">
               Learn more
             </button>
           </div>
