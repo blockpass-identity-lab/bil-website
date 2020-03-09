@@ -27,7 +27,7 @@ const Events = () => {
         {data.allContentfulEvent.edges.map(edge => {
           return (
             <Link to={`/event/${edge.node.slug}`}>
-              <Card style={{ width: "28rem" }} className={eventsStyles.event}>
+              <Card style={{ width: "22rem" }} className={eventsStyles.event}>
                 <Card.Img
                   variant="top"
                   src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80/100px180"
