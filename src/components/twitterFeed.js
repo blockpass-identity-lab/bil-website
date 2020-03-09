@@ -1,6 +1,6 @@
 import React from "react"
 
-const TwitterFeed = () => {
+const Twitter = () => {
   return (
     <div>
       <h3>Twitter Feed</h3>
@@ -18,4 +18,4 @@ const TwitterFeed = () => {
   )
 }
 
-export default TwitterFeed
+export default Twitter

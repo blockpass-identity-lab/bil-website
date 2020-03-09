@@ -5,6 +5,7 @@ import Header from "../components/header"
 import Jumbo from "../components/jumbo"
 import Worktribe from "../components/worktribe"
 import Layout from "../components/layout"
+import Twitter from "../components/twitterFeed"
 
 // export default () => <div>Bil-Website First Commit (Leonidas Zoidis)</div>
 
@@ -31,6 +32,7 @@ export default () => (
         </div>
       </div>
       <Worktribe />
+      <Twitter />
       <Events />
     </Layout>
   </div>
