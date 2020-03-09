@@ -19,6 +19,18 @@ module.exports = {
         accessToken: "ue76suCe3wMvf-G5XYCHNuE3-12kE2N6G63Nc-P8Edk",
       },
     },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "GatsbyJS",
+        short_name: "GatsbyJS",
+        start_url: "/",
+        background_color: "#f7f0eb",
+        theme_color: "#a2466c",
+        display: "standalone",
+        icon: "src/img/favicon.png",
+      },
+    },
     `gatsby-plugin-twitter`,
   ],
 }
