@@ -2,13 +2,39 @@ import React from "react"
 
 import { graphql, useStaticQuery } from "gatsby"
 
+
+
 const Team = () => {
-    <div>
+    const data = useStaticQuery(graphql`
+        query {
+            allContentfulTeamMember {
+            edges {
+                node {
+                memberName
+                memberTitle
+                memberProfile {
+                    file {
+                    url
+                    }
+                }
+                }
+            }
+            }
+        }
+    `)
+
+    return (
         <div>
-            <p>Name</p>
-            <em>Job Title</em>
+        {data.allContentfulTeamMember.edges.map(edge => {
+            return(
+                <div>
+                    <p>{edge.node.memberName}</p>
+                    <p>{ edge.node.memberTitle }</p>
+                </div>
+            )
+        })}
         </div>
-    </div>
+    )
 }
 
 export default Team
