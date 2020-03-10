@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 .header {
   text-align: center;
   position: relative;
@@ -38,7 +42,7 @@
   margin: auto;
   padding: auto;
   margin-top: -15px;
-  margin-right: 15vh;
+  margin-right: 30vh;
 }
 .container {
   display: grid;
@@ -56,7 +60,7 @@
     display: block;
   }
   .twitter-timeline {
-    margin-left: 48px;
+    margin-left: 1vh;
   }
   .header {
     font-size: 1.75rem;
@@ -84,4 +88,15 @@ p {
 .card:hover {
   transform: scale(1.04);
   transition: all 1s;
+}
+.team {
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+  margin-top: 10vh;
+}
+
+@media (max-width: 1000px) {
+  .team {
+    display: block;
+  }
 }
