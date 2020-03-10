@@ -33,6 +33,7 @@ export default () => (
         <Events />
         <Twitter />
       </div>
+      <h1>Our Team</h1>
       <Team />
     </Layout>
   </div>
