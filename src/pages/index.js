@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import Header from "../components/header"
 import Events from "../components/events"
 import Twitter from "../components/twitterFeed"
+import Team from "../components/team"
 
 // export default () => <div>Bil-Website First Commit (Leonidas Zoidis)</div>
 
@@ -32,6 +33,8 @@ export default () => (
         <Events />
         <Twitter />
       </div>
+      <h1>Our Team</h1>
+      <Team />
     </Layout>
   </div>
 )
