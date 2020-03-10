@@ -6,7 +6,7 @@ const Twitter = () => {
       <a
         class="twitter-timeline"
         data-width="450"
-        data-height="630"
+        data-height="835"
         data-dnt="true"
         data-theme="dark"
         href="https://twitter.com/BlockpassIDLab?ref_src=twsrc%5Etfw"
