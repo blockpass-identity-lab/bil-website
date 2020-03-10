@@ -1,8 +1,8 @@
 import React from "react"
 
 import { graphql, useStaticQuery } from "gatsby"
-
-
+import Card from "react-bootstrap/Card"
+import teamStyles from "./team.module.scss"
 
 const Team = () => {
     const data = useStaticQuery(graphql`
@@ -24,13 +24,21 @@ const Team = () => {
     `)
 
     return (
-        <div>
+        <div className={teamStyles.team}>
         {data.allContentfulTeamMember.edges.map(edge => {
             return(
-                <div>
-                    <p>{edge.node.memberName}</p>
-                    <p>{ edge.node.memberTitle }</p>
-                </div>
+                <Card className={teamStyles.teamMember}>
+                    <Card.Img 
+                    className={teamStyles.teamMemberPic}
+                    variant="top" 
+                    src={edge.node.memberProfile.file.url}
+                    />
+                    <Card.Body>
+                        <Card.Title>{ edge.node.memberName }</Card.Title>
+                        <Card.Text>{ edge.node.memberTitle }</Card.Text>
+                    </Card.Body>
+
+                </Card>
             )
         })}
         </div>
