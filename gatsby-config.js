@@ -38,21 +38,18 @@ module.exports = {
       resolve: 'gatsby-source-github',
       options: {
         headers: {
-          Authorization: `Bearer 945e41aa81fcdedfcc3e95af4abb505c1fd4eb27`, // https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
+          Authorization: `Bearer db179cf74c423414fcf10145d3685ebbdac5cc95`, // https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
         },
-        // QUeries
         queries: [
           `{
-            repository(owner: "MartinGras95", name: "issuestest") {
+            repository(owner: "MartinGras95", name: "issuestest ") {
               issues(last: 20, states: OPEN) {
                 edges {
                   node {
                     id
                     author {
-                      url
                       login
                     }
-                    bodyHTML
                     title
                     url
                   }

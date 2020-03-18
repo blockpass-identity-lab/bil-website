@@ -7,18 +7,17 @@ const Issues = () => {
 
     // Querying for issues from github
     const data = useStaticQuery(graphql`
-        query{
+        query {
             allGithubIssues {
-                edges {
-                 node {
-                    title
-                    url
-                    author{
-                        login
-                    }
-                    }
-
+            edges {
+                node {
+                title
+                url
+                author {
+                    login
                 }
+                }
+            }
             }
         }
     `)
