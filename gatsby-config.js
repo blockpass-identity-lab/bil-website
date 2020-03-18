@@ -40,6 +40,7 @@ module.exports = {
         headers: {
           Authorization: `Bearer 945e41aa81fcdedfcc3e95af4abb505c1fd4eb27`, // https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
         },
+        // QUeries
         queries: [
           `{
             repository(owner: "MartinGras95", name: "issuestest") {
