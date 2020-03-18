@@ -15,8 +15,8 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        spaceId: "9tsw91dqehj4",
-        accessToken: "ue76suCe3wMvf-G5XYCHNuE3-12kE2N6G63Nc-P8Edk",
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     {
@@ -38,7 +38,7 @@ module.exports = {
       resolve: 'gatsby-source-github',
       options: {
         headers: {
-          Authorization: `Bearer 99eb1bfede15c97ac75e67279824066657d10228`, // https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
+          Authorization: `Bearer ${process.env.GITHUB_API_TOKEN}`, // https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
         },
         queries: [
           `{
