@@ -49,6 +49,7 @@ module.exports = {
                     id
                     author {
                       url
+                      login
                     }
                     bodyHTML
                     title

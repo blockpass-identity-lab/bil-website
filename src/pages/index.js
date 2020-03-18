@@ -38,7 +38,10 @@ export default () => (
         <h1>Our Team</h1>
         <Team />
       </div>
-      <Issues />
+      <div className="container">
+        <Issues />
+      </div>
+      
     </Layout>
   </div>
 )
