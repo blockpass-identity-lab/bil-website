@@ -16,7 +16,7 @@ module.exports = {
       resolve: "gatsby-source-contentful",
       options: {
         spaceId: "9tsw91dqehj4",
-        accessToken: "ue76suCe3wMvf-G5XYCHNuE3-12kE2N6G63Nc-P8Edk",
+        accessToken: "ue76suCe3wMvf-G5XYCHNuE3-12kE2N6G63Nc-P8Edk"
       },
     },
     {
@@ -34,34 +34,31 @@ module.exports = {
     `gatsby-plugin-twitter`,
     
     // Sourcing from github. (A temporary repository made by martin which contains 2 issues to be pulled)
-    {
-      resolve: 'gatsby-source-github',
-      options: {
-        headers: {
-          Authorization: `Bearer 945e41aa81fcdedfcc3e95af4abb505c1fd4eb27`, // https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
-        },
-        // QUeries
-        queries: [
-          `{
-            repository(owner: "MartinGras95", name: "issuestest") {
-              issues(last: 20, states: OPEN) {
-                edges {
-                  node {
-                    id
-                    author {
-                      url
-                      login
-                    }
-                    bodyHTML
-                    title
-                    url
-                  }
-                }
-              }
-            }
-          }`,
-        ],
-      },
-    },
+    // {
+    //   resolve: 'gatsby-source-github',
+    //   options: {
+    //     headers: {
+    //       Authorization: `Bearer ${process.env.GITHUB_API_TOKEN}`, // https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
+    //     },
+    //     queries: [
+    //       `{
+    //         repository(owner: "MartinGras95", name: "issuestest ") {
+    //           issues(last: 20, states: OPEN) {
+    //             edges {
+    //               node {
+    //                 id
+    //                 author {
+    //                   login
+    //                 }
+    //                 title
+    //                 url
+    //               }
+    //             }
+    //           }
+    //         }
+    //       }`,
+    //     ],
+    //   },
+    // },
   ],
 }
