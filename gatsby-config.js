@@ -32,5 +32,34 @@ module.exports = {
       },
     },
     `gatsby-plugin-twitter`,
+    
+    // Sourcing from github. (A temporary repository made by martin which contains 2 issues to be pulled)
+    {
+      resolve: 'gatsby-source-github',
+      options: {
+        headers: {
+          Authorization: `Bearer 945e41aa81fcdedfcc3e95af4abb505c1fd4eb27`, // https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
+        },
+        queries: [
+          `{
+            repository(owner: "MartinGras95", name: "issuestest") {
+              issues(last: 20, states: OPEN) {
+                edges {
+                  node {
+                    id
+                    author {
+                      url
+                    }
+                    bodyHTML
+                    title
+                    url
+                  }
+                }
+              }
+            }
+          }`,
+        ],
+      },
+    },
   ],
 }
