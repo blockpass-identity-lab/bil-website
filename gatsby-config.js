@@ -34,6 +34,7 @@ module.exports = {
     `gatsby-plugin-twitter`,
     
     // Sourcing from github. (A temporary repository made by martin which contains 2 issues to be pulled)
+    // Github
     {
       resolve: 'gatsby-source-github',
       options: {
