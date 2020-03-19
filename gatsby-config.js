@@ -34,31 +34,33 @@ module.exports = {
     `gatsby-plugin-twitter`,
     
     // Sourcing from github. (A temporary repository made by martin which contains 2 issues to be pulled)
-    // {
-    //   resolve: 'gatsby-source-github',
-    //   options: {
-    //     headers: {
-    //       Authorization: `Bearer ${process.env.GITHUB_API_TOKEN}`, // https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
-    //     },
-    //     queries: [
-    //       `{
-    //         repository(owner: "MartinGras95", name: "issuestest ") {
-    //           issues(last: 20, states: OPEN) {
-    //             edges {
-    //               node {
-    //                 id
-    //                 author {
-    //                   login
-    //                 }
-    //                 title
-    //                 url
-    //               }
-    //             }
-    //           }
-    //         }
-    //       }`,
-    //     ],
-    //   },
-    // },
+    {
+      resolve: 'gatsby-source-github',
+      options: {
+        headers: {
+          Authorization: `Bearer ${process.env.GITHUB_API_KEY}` // https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
+        },
+        queries: [
+          `{
+            repository(owner: "MartinGras95", name: "issuestest") {
+              issues(last: 20, states: OPEN) {
+                edges {
+                  node {
+                    id
+                    author{
+                      url
+                      login
+                    }
+                    bodyHTML
+                    title
+                    url
+                  }
+                }
+              }
+            }
+          }`,
+        ],
+      },
+    },
   ],
 }

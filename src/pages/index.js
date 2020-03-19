@@ -5,7 +5,7 @@ import Header from "../components/header"
 import Events from "../components/events"
 import Twitter from "../components/twitterFeed"
 import Team from "../components/team"
-// import Issues from "../components/issues"
+import Issues from "../components/issues"
 
 // export default () => <div>Bil-Website First Commit (Leonidas Zoidis)</div>
 
@@ -39,7 +39,7 @@ export default () => (
         <Team />
       </div>
       <div className="container">
-        
+        <Issues />
       </div>
       
     </Layout>
