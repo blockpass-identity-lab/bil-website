@@ -1,7 +1,22 @@
-* {
-  margin: 0;
-  padding: 0;
+@import url("https://fonts.googleapis.com/css?family=Oxanium&display=swap");
+@media (max-width: 1000px) {
+  .container {
+    display: block;
+  }
+  .twitter-timeline {
+    margin-left: 1vh;
+  }
+  .header {
+    font-size: 1.75rem;
+  }
 }
+
+@media (max-width: 1000px) {
+  .team {
+    display: block;
+  }
+}
+
 .header {
   text-align: center;
   position: relative;
@@ -26,6 +41,10 @@
 
 .nav {
   background-color: black;
+}
+
+Navbar {
+  color: white !important;
 }
 
 .links {
@@ -55,17 +74,6 @@
   padding: 0;
 }
 
-@media (max-width: 1000px) {
-  .container {
-    display: block;
-  }
-  .twitter-timeline {
-    margin-left: 1vh;
-  }
-  .header {
-    font-size: 1.75rem;
-  }
-}
 .btn {
   margin-right: 5vh;
   margin-top: 3vh;
@@ -78,8 +86,6 @@
   line-height: 2em;
   margin-top: 7vh;
 }
-
-@import url("https://fonts.googleapis.com/css?family=Oxanium&display=swap");
 
 h1,
 p {
@@ -95,8 +101,10 @@ p {
   margin-top: 10vh;
 }
 
-@media (max-width: 1000px) {
-  .team {
-    display: block;
-  }
+.footer_container {
+  background-color: white;
+}
+
+.small_font {
+  font-size: 10px;
 }
