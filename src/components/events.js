@@ -14,6 +14,7 @@ const Events = () => {
             eventTitle
             eventDate(formatString: "MMMM Do. YYYY")
             slug
+            eventEndDate(formatString: "MMMM Do. YYYY")
           }
         }
       }
@@ -34,7 +35,7 @@ const Events = () => {
                 />
                 <Card.Body>
                   <Card.Title>{edge.node.eventTitle}</Card.Title>
-                  <Card.Text>{edge.node.eventDate}</Card.Text>
+                  <Card.Text>{edge.node.eventDate} - {edge.node.eventEndDate}</Card.Text>
                 </Card.Body>
               </Card>
             </Link>
