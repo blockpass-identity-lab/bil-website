@@ -4,6 +4,7 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import Card from "react-bootstrap/Card"
 import teamStyles from "./team.module.scss"
 
+
 const Team = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -26,9 +27,10 @@ const Team = () => {
 
   return (
     <div className={teamStyles.team}>
+
       {data.allContentfulTeamMember.edges.map(edge => {
         return (
-          <Link to={`/team/${edge.node.slug}`}>
+          <Link className={teamStyles.link} to={`/team/${edge.node.slug}`}>
           <Card className={teamStyles.teamMember}>
             <Card.Img
               className={teamStyles.teamMemberPic}
@@ -41,6 +43,7 @@ const Team = () => {
             </Card.Body>
           </Card>
           </Link>
+          
           
         )
       })}

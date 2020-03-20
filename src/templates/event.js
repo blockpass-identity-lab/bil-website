@@ -12,6 +12,7 @@ export const query = graphql`
         contentfulEvent(slug: {eq: $slug}) {
             eventTitle
             eventDate(formatString: "MMMM Do, YYYY")
+            eventEndDate(formatString: "MMMM Do. YYYY")
             eventDescription{
                 json
             }
@@ -40,7 +41,7 @@ const Event = (props) => {
                 <div className={ eventStyles.content }>
                     {/* grab and display contentful data here */}
                     <h1>{props.data.contentfulEvent.eventTitle}</h1>
-                    <p>{props.data.contentfulEvent.eventDate}</p>
+                    <p>{props.data.contentfulEvent.eventDate} - {props.data.contentfulEvent.eventEndDate}</p>
                     {/* render rich text */}
                     {documentToReactComponents(props.data.contentfulEvent.eventDescription.json,options)}
                 </div>
