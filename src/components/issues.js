@@ -9,6 +9,7 @@ const Issues = () => {
     const data = useStaticQuery(graphql`
         query {
             allGithubIssues {
+                allGithubIssues {
             edges {
                 node {
                 title
