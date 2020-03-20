@@ -1,11 +1,10 @@
 .events {
   list-style-type: none;
-  margin: 0;
+  margin: auto;
 }
-
 .event {
   margin: 1rem 0.5rem;
-  display: inline-block;
+  display: block;
   background-color: #292f33;
   border: solid 3px #292f33;
 }

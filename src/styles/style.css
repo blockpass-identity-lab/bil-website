@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 @import url("https://fonts.googleapis.com/css?family=Oxanium&display=swap");
 @media (max-width: 1000px) {
   .container {
@@ -66,14 +71,12 @@ Navbar {
 .container {
   display: grid;
   grid-template-columns: repeat(2, 2fr);
-  margin: auto;
 }
 
 .twitter-timeline {
   margin: 0;
   padding: 0;
 }
-
 .btn {
   margin-right: 5vh;
   margin-top: 3vh;
@@ -97,7 +100,7 @@ p {
 }
 .team {
   display: grid;
-  grid-template-columns: repeat(1, 2fr);
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 10vh;
 }
 
