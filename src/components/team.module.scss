@@ -1,5 +1,5 @@
 .team {
-  display: -webkit-inline-box;
+  display: flex;
   margin: 0 auto;
 }
 
@@ -15,4 +15,8 @@
   height: 150px;
   border: 0;
   border: solid 2px #292f33;
+}
+
+.link{
+  text-decoration: none;
 }
