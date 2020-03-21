@@ -2,15 +2,10 @@ import React from "react"
 
 const Footer = () => {
   return (
-    <div class="container-fluid footer_container pt-3">
+    <div class="container-fluid footer_container pt-4">
       <div class="row">
-        <div class="col-md-3 offset-md-1">
-          <h3>Footer</h3>
-          <p>enter logo</p>
-        </div>
-        <div class="col-md-3">
-          <p>enter logo 2</p>
-        </div>
+        <div class="col-md-4 offset-md-1 logo"></div>
+        <div class="col-md-3"></div>
         <div class="col-md-3">
           <p>
             <i class="far fa-envelope"></i>
