@@ -1,9 +1,21 @@
-.container{
-    display: flex;
-    margin-bottom: 50px;
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 50px;
 }
 
-.issue{
-    width: 250px;
-    background-color: #292f33;
+.issue {
+  width: 80%;
+  background-color: #292f33;
+  margin-left: 40px;
+  margin-bottom: 10vh;
+}
+
+@media (max-width: 500px) {
+  .container {
+    display: block;
+  }
+  .issue {
+    margin-top: 20px;
+  }
 }

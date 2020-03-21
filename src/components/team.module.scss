@@ -1,6 +1,9 @@
 .team {
-  display: flex;
-  margin: 0 auto;
+  width: 80%;
+  margin-left: 110px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 15vh;
 }
 
 .teamMember {
@@ -17,6 +20,8 @@
   border: solid 2px #292f33;
 }
 
-.link{
-  text-decoration: none;
+@media (max-width: 550px) {
+  .team {
+    display: block;
+  }
 }
