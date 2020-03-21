@@ -30,15 +30,16 @@ export default () => (
           Learn more
         </button>
       </div>
-      <div className="container">
+      <div className="container content">
         <Events />
         <Twitter />
       </div>
-      <div className="content team">
-        <h1>Our Team</h1>
+      <div className="content">
+        <h2 className="headings">Our Team</h2>
         <Team />
       </div>
-      <div className="container">
+      <div className="content">
+        <h2 className="headings">Projects/Issues</h2>
         <Issues />
       </div>
     </Layout>
