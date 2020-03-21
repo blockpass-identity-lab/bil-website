@@ -2,6 +2,7 @@
 .container{
     // Center container
     margin: 0 auto;
+    margin-top: 2rem;
     max-width: 750px;
     padding: 1rem;
 
@@ -18,5 +19,10 @@
 }
 
 .image{
-    max-width: 250px;
+    width: 250px;
+   
+}
+
+.firstRow{
+    margin-bottom: 1rem;
 }

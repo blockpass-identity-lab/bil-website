@@ -1,11 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+
 // this module renders rich text from contentful to react components
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Layout from '../components/layout'
 import memberStyles from './member.module.scss'
-import { Image } from 'react-bootstrap'
+import { Image, Container, Row, Col } from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // query to get specific event
 export const query = graphql`
@@ -57,24 +59,33 @@ const Member = (props) => {
                     {/* grab and display contentful data here */}
                     <h1>{props.data.contentfulTeamMember.memberName}</h1>
                     {/* render rich text */}
-                    <em>Bio:</em>
+                    <em>Bio: </em>
                     {documentToReactComponents(props.data.contentfulTeamMember.bio.json,options)}
-                    <em>Github:</em>
-                    {props.data.contentfulTeamMember.githubProfile}
-                    <br />
-                    <em>Email:</em>
-                    {props.data.contentfulTeamMember.email}
-                    <br />
-                    <em>Twitter:</em>
-                    {props.data.contentfulTeamMember.twitter}
-                    <br />
-                    <em>Worktribe:</em>
-                    {props.data.contentfulTeamMember.worktribe}
 
-
+                    <Container fluid>
+                        <Row className={ memberStyles.firstRow }>
+                            <Col>
+                                <em>Email</em> <br />
+                                {props.data.contentfulTeamMember.email}
+                            </Col>
+                            <Col>
+                                <em>Worktribe</em> <br />
+                                {props.data.contentfulTeamMember.worktribe}
+                            </Col>
+                        </Row> <br />
+                        <Row>
+                            <Col>
+                                <em>Github</em> <br />
+                                {props.data.contentfulTeamMember.githubProfile}
+                            </Col>
+                            <Col>
+                                <em>Twitter</em> <br />
+                                {props.data.contentfulTeamMember.twitter}
+                            </Col>
+                        </Row>
+                    </Container>
                 </div>
             </div>
-
         </Layout>
 
     )
