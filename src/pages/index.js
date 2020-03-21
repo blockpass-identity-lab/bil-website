@@ -14,7 +14,7 @@ export default () => (
     <Layout>
       <Header />
       <div class="container-fluid mt-0 bg-dark p-5 content">
-        <h1>Blockpass Identity Lab</h1>
+        <h2>Blockpass Identity Lab</h2>
         <p class="font-weight-light desc">
           <span class="font-weight-bold">Blockpass Identity Lab </span> is a
           collaboration between Blockpass IDN and Edinburgh Napier University
@@ -41,7 +41,6 @@ export default () => (
       <div className="container">
         <Issues />
       </div>
-      
     </Layout>
   </div>
 )
