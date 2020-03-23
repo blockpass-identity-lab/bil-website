@@ -2,17 +2,22 @@
   margin: 0;
   padding: 0;
 }
-.header {
+
+.header_container {
   text-align: center;
-  position: relative;
   background: url("../img/header_bg.jpg") no-repeat center center/cover;
-  height: 62vh;
-  color: white;
-  padding-top: 75px;
-  border-bottom: 3px solid white;
-  margin: auto;
-  line-height: 2em;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.header_title {
+  color: #ffff;
+  font-weight: 200;
+  text-align: center !important;
+  align-items: center !important;
+}
+
 .logo {
   margin-left: 15px;
   margin-top: 15px;
@@ -22,18 +27,29 @@
   background: url("../img/header_logo_white.png") no-repeat;
 }
 .navbar {
-  background-color: black;
+  background-color: #263238;
 }
 .nav-link {
   color: white;
+  transition: 0.3s ease;
+  background: #263238;
+  color: #ffffff;
+}
+
+.nav-link a:hover {
+  text-decoration: underline;
+}
+
+.nav-link a:active {
+  color: #b71c1c;
 }
 
 .sticky-top {
-  border-bottom: 3px solid white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .nav a:hover {
-  color: #a80d37;
+  color: #ff5252;
 }
 
 .btn {
@@ -41,24 +57,24 @@
   margin-top: 3vh;
 }
 .btn:hover {
-  transform: scale(1.15);
-  transition: all 1s;
+  /* transform: scale(1.15);
+  transition: all 1s; */
 }
 .desc {
   line-height: 2em;
   margin-top: 7vh;
 }
 
-h1,
+/* h1,
 h2,
 p,
 nav {
   font-family: "Oxanium", cursive;
   color: white;
-}
+} */
 .card:hover {
-  transform: scale(1.04);
-  transition: all 1s;
+  /* transform: scale(1.04);
+  transition: all 1s; */
 }
 
 .footer_container {
@@ -105,3 +121,6 @@ nav {
     transform: none;
   }
 }
+
+/* <Caoursel CSS> */
+/* </Caoursel CSS> */
