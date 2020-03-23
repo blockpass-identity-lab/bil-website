@@ -51,19 +51,21 @@
 .nav a:hover {
   color: #ff5252;
 }
-
-.btn {
+.cta_btn {
+  margin: 5px;
+}
+/* .btn {
   margin-right: 5vh;
   margin-top: 3vh;
-}
+} */
 .btn:hover {
   /* transform: scale(1.15);
   transition: all 1s; */
 }
-.desc {
+/* .desc {
   line-height: 2em;
   margin-top: 7vh;
-}
+} */
 
 /* h1,
 h2,
@@ -100,27 +102,43 @@ nav {
   margin-top: 5vh;
 }
 
-.container {
+/* .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-}
+} */
 
 @import url("https://fonts.googleapis.com/css?family=Oxanium&display=swap");
 @media (max-width: 1000px) {
   .header {
     font-size: 1.75rem;
   }
-  .content {
+  /* .content {
     display: block;
     overflow: hidden;
+  } */
+
+  .container-content {
+    margin-top: 35px;
   }
   .twitter-timeline {
-    margin-left: 6px;
+    /* margin-left: 6px; */
   }
   .card:hover {
     transform: none;
   }
 }
 
-/* <Caoursel CSS> */
-/* </Caoursel CSS> */
+/* <Carousel CSS> */
+.carousel_container {
+  background-color: grey;
+}
+
+.carousel-inner img {
+}
+
+.card {
+  border: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+/* </Carousel CSS> */
