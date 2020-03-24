@@ -39,7 +39,13 @@ export default () => (
         <Team />
       </div>
       <div className="container">
+        <h2>Recent Github Issues</h2> 
+        <br />
         <Issues />
+        <br />
+        <a href="https://github.com/MartinGras95/issuestest/issues">
+          See More
+        </a>
       </div>
       
     </Layout>
