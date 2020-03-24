@@ -1,11 +1,12 @@
 .events {
   list-style-type: none;
-  margin: 0;
 }
-
 .event {
   margin: 1rem 0.5rem;
-  display: inline-block;
+  display: block;
   background-color: #292f33;
   border: solid 3px #292f33;
+  margin-bottom: 5vh;
+  margin-right: 30vh;
+  margin-top: -2px;
 }

@@ -14,7 +14,7 @@ export default () => (
     <Layout>
       <Header />
       <div class="container-fluid mt-0 bg-dark p-5 content">
-        <h1>Blockpass Identity Lab</h1>
+        <h2>Blockpass Identity Lab</h2>
         <p class="font-weight-light desc">
           <span class="font-weight-bold">Blockpass Identity Lab </span> is a
           collaboration between Blockpass IDN and Edinburgh Napier University
@@ -30,24 +30,22 @@ export default () => (
           Learn more
         </button>
       </div>
-      <div className="container">
+      <div className="container content">
         <Events />
         <Twitter />
       </div>
-      <div className="content team">
-        <h1>Our Team</h1>
+      <div className="content">
+        <h2 className="headings">Our Team</h2>
         <Team />
       </div>
-      <div className="container">
-        <h2>Recent Github Issues</h2> 
-        <br />
+      <div className="content">
+        <h2 className="headings">Projects/Issues</h2>
         <Issues />
         <br />
         <a href="https://github.com/MartinGras95/issuestest/issues">
           See More
         </a>
       </div>
-      
     </Layout>
   </div>
 )
