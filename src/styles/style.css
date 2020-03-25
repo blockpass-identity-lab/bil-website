@@ -102,31 +102,35 @@ nav {
   margin-top: 5vh;
 }
 
+.font-size-1 {
+  /* font-size: 12px !important; */
+}
+
 /* .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 } */
 
-@import url("https://fonts.googleapis.com/css?family=Oxanium&display=swap");
+/*@import url("https://fonts.googleapis.com/css?family=Oxanium&display=swap");
 @media (max-width: 1000px) {
   .header {
     font-size: 1.75rem;
   }
-  /* .content {
+  .content {
     display: block;
     overflow: hidden;
-  } */
+  }
 
   .container-content {
     margin-top: 35px;
   }
   .twitter-timeline {
     /* margin-left: 6px; */
-  }
+/* }
   .card:hover {
     transform: none;
   }
-}
+} */
 
 /* <Carousel CSS> */
 .carousel_container {
@@ -142,3 +146,18 @@ nav {
 }
 
 /* </Carousel CSS> */
+
+.card_style {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card_style:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.team-module--team--2CAfx {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
