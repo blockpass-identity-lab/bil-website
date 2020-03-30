@@ -8,49 +8,55 @@ const Events = () => {
   // Query to contentful to get events
   const data = useStaticQuery(graphql`
     query {
-      allContentfulEvent {
+      one: allContentfulEvent(sort: {fields: eventDate, order: ASC,},limit:2) {
         edges {
           node {
             eventTitle
             eventDate(formatString: "MMMM Do. YYYY")
             slug
-            eventEndDate(formatString: "MMMM Do. YYYY")
+            endDateDifference: eventEndDate(difference: "days")
+            endDate: eventEndDate(formatString: "MMMM Do. YYYY")
           }
         }
       }
     }
   `)
 
+
   return (
     <div className="events">
       <ol className={eventsStyles.events}>
+      
         {/* Grabbing data from the query and iterating through it to display each event as a list item */}
-        {data.allContentfulEvent.edges.map(edge => {
-          return (
-            <Link to={`/event/${edge.node.slug}`}>
-              <Card style={{ width: "26rem" }} className={eventsStyles.event}>
-                <Card.Img
-                  variant="top"
-                  src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80/100px180"
-                />
-                <Card.Body>
-                  <Card.Title>{edge.node.eventTitle}</Card.Title>
-                  <Card.Text>
-                    {edge.node.eventDate} - {edge.node.eventEndDate}
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Link>
+        {data.one.edges.map(edge => {
+          // the difference value in date query returns the difference between today and chosen date
+          // returned values which are less than 0 signify a future date and above 0 past date
+          // If the difference between the event's end date and current date is less than 1
+          // then return it from the query and display on website
+          if(edge.node.endDateDifference < 1){
+            return (
+              <Link to={`/event/${edge.node.slug}`}>
+                <Card style={{ width: "26rem" }} className={eventsStyles.event}>
+                  <Card.Img
+                    variant="top"
+                    src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80/100px180"
+                  />
+                  <Card.Body>
+                    <Card.Title>{edge.node.eventTitle}</Card.Title>
+                    <Card.Text>
+                      {edge.node.eventDate} - {edge.node.endDate}
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Link>
+            )
+          }
+          else{
+            return(
+              null
+            )
+            }
 
-            // // List item with event
-            // <li className={eventsStyles.event}>
-            //   {/* link to the event's own page */}
-            //   <Link to={`/event/${edge.node.slug}`}>
-            //     <h2>{edge.node.eventTitle}</h2>
-            //     <p>{edge.node.eventDate}</p>
-            //   </Link>
-            // </li>
-          )
         })}
       </ol>
     </div>
