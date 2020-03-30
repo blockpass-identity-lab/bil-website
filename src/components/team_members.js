@@ -1,7 +1,6 @@
 import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 
-
 const Team_members = () => {
   return (
     <div class="container">
@@ -10,8 +9,8 @@ const Team_members = () => {
           <div class="card card_style">
             <img src="..." class="card-img-top" alt="..."></img>
             <div class="card-body">
-              <h5 class="card-title text-dark">Card title</h5>
-              <p class="card-text text-dark">
+              <h5 class="card-title text-light">Card title</h5>
+              <p class="card-text text-light">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>

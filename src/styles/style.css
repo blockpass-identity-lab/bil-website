@@ -70,7 +70,6 @@
   margin-bottom: 5vh;
 }
 .card {
-  border: none;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .card_style {
@@ -94,5 +93,15 @@
   margin-top: -15vh;
 }
 #anchor_events {
+  background-color: #292f33;
+}
+.card_style {
+  height: 100%;
+  width: 85%;
+}
+.card-img-top {
+  height: 45%;
+}
+.cardC {
   background-color: #292f33;
 }
