@@ -13,7 +13,7 @@ export default () => (
   <div class="bg-dark">
     <Layout>
       <Header />
-      <div class="container-fluid mt-0 bg-light text-dark p-5 content mx-auto">
+      <div class="container-fluid mt-0 bg-dark text-light p-5 content mx-auto">
         <div class="row d-flex justify-content-center">
           <div class="col-12 mx-auto">
             <h2>Blockpass Identity Lab</h2>
@@ -26,7 +26,7 @@ export default () => (
               the right of citizens to data privacy.
             </p>
             <button
-              type="button "
+              type="button"
               id="anchor_events"
               class="btn btn-lg btn-outline-primary cta_btn "
             >
@@ -47,24 +47,29 @@ export default () => (
             <div class="col-md-6 col-sm-12">
               <Events />
             </div>
-
             <div class="col-md-6 col-sm-12">
               <Twitter />
             </div>
           </div>
         </div>
       </div>
-      <div className="content bg-light">
-        <h2 className="headings text-dark pt-5">Our Team</h2>
+      <div className="content bg-dark">
+        <h2 className="headings text-light pt-5">Our Team</h2>
         <Team />
       </div>
       <div className="content">
-        <h2 className="headings">Projects/Issues</h2>
+        <h2 className="headings">Projects</h2>
         <Issues />
         <br />
-        <a href="https://github.com/MartinGras95/issuestest/issues">
-          See More
-        </a>
+        <button
+          type="button"
+          id="anchor_events"
+          class="btn btn-lg btn-outline-primary cta_btn seeMore"
+        >
+          <a href="https://github.com/MartinGras95/issuestest/issues">
+            See More
+          </a>
+        </button>
       </div>
     </Layout>
   </div>

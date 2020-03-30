@@ -33,7 +33,11 @@ const Team = () => {
             <div class="col-md-3">
               <Link className={teamStyles.link} to={`/team/${edge.node.slug}`}>
                 <div class="card card_style">
-                  <img src={edge.node.memberProfile.file.url} class="card-img-top" alt="member"/>
+                  <img
+                    src={edge.node.memberProfile.file.url}
+                    class="card-img-top"
+                    alt="member"
+                  />
                   <div class="card-body">
                     <h5 class="card-title text-dark">{edge.node.memberName}</h5>
                     <p class="card-text text-dark">{edge.node.memberTitle}</p>

@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
 }
-
 .header_container {
   text-align: center;
   background: url("../img/header_bg.jpg") no-repeat center center/cover;
@@ -17,7 +16,6 @@
   text-align: center !important;
   align-items: center !important;
 }
-
 .logo {
   margin-left: 15px;
   margin-top: 15px;
@@ -27,126 +25,54 @@
   background: url("../img/header_logo_white.png") no-repeat;
 }
 .navbar {
-  background-color: #263238;
+  background-color: black;
 }
 .nav-link {
   color: white;
   transition: 0.3s ease;
-  background: #263238;
+  background: black;
   color: #ffffff;
 }
-
 .nav-link a:hover {
   text-decoration: underline;
 }
-
 .nav-link a:active {
-  color: #b71c1c;
+  color: #aa0e36;
 }
-
 .sticky-top {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-bottom: solid 3px white;
 }
-
 .nav a:hover {
-  color: #ff5252;
+  color: #aa0e36;
 }
 .cta_btn {
   margin: 5px;
 }
-/* .btn {
-  margin-right: 5vh;
-  margin-top: 3vh;
-} */
-.btn:hover {
-  /* transform: scale(1.15);
-  transition: all 1s; */
-}
-/* .desc {
-  line-height: 2em;
-  margin-top: 7vh;
-} */
-
-/* h1,
-h2,
-p,
-nav {
-  font-family: "Oxanium", cursive;
-  color: white;
-} */
-.card:hover {
-  /* transform: scale(1.04);
-  transition: all 1s; */
-}
-
 .footer_container {
   background-color: black;
   border-top: 3px solid white;
 }
-
 .small_font {
   font-size: 10px;
   color: white;
 }
-
 .headings {
   margin-top: 7vh;
   margin-bottom: 7vh;
-}
-
-.content {
   color: white;
+}
+.content {
   margin: auto;
   padding: auto;
   text-align: center;
-  margin-top: 5vh;
+  line-height: 7vh;
+  margin-bottom: 5vh;
 }
-
-.font-size-1 {
-  /* font-size: 12px !important; */
-}
-
-/* .container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-} */
-
-/*@import url("https://fonts.googleapis.com/css?family=Oxanium&display=swap");
-@media (max-width: 1000px) {
-  .header {
-    font-size: 1.75rem;
-  }
-  .content {
-    display: block;
-    overflow: hidden;
-  }
-
-  .container-content {
-    margin-top: 35px;
-  }
-  .twitter-timeline {
-    /* margin-left: 6px; */
-/* }
-  .card:hover {
-    transform: none;
-  }
-} */
-
-/* <Carousel CSS> */
-.carousel_container {
-  background-color: grey;
-}
-
-.carousel-inner img {
-}
-
 .card {
   border: none;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-
-/* </Carousel CSS> */
-
 .card_style {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -155,9 +81,18 @@ nav {
 .card_style:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-
 .team-module--team--2CAfx {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
+}
+.bg {
+  background-color: #343a40;
+}
+.seeMore {
+  margin-bottom: 10vh;
+  margin-top: -15vh;
+}
+#anchor_events {
+  background-color: #292f33;
 }
