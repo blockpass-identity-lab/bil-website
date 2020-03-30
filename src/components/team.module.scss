@@ -1,27 +1,16 @@
 .team {
-  // width: 80%;
-  // margin-left: 110px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  // margin-bottom: 15vh;
 }
 
 .teamMember {
   width: 200px;
   height: 250px;
-  margin: 1em;
-  // background-color: #292f33;
+  margin: 1rem;
   margin-top: 2.5rem;
 }
 
 .teamMemberPic {
   height: 150px;
   border: 0;
-  // border: solid 2px #292f33;
-}
-
-@media (max-width: 550px) {
-  .team {
-    display: block;
-  }
 }
