@@ -35,7 +35,7 @@ const EventsPage = () => {
                         width: "22rem",
                         marginBottom: "6rem",
                         marginTop: "4rem",
-                        marginLeft: "3rem",
+                        marginLeft: "1.25rem",
                         backgroundColor: "#292f33",
                       }}
                     >
