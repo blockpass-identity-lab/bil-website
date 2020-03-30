@@ -38,9 +38,11 @@ const Team = () => {
                     class="card-img-top"
                     alt="member"
                   />
-                  <div class="card-body">
-                    <h5 class="card-title text-dark">{edge.node.memberName}</h5>
-                    <p class="card-text text-dark">{edge.node.memberTitle}</p>
+                  <div class="card-body cardC">
+                    <h5 class="card-title text-light">
+                      {edge.node.memberName}
+                    </h5>
+                    <p class="card-text text-light">{edge.node.memberTitle}</p>
                   </div>
                 </div>
               </Link>
