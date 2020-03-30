@@ -3,10 +3,17 @@
 }
 .event {
   margin: 1rem 0.5rem;
+  width: 26rem;
   display: block;
   background-color: #292f33;
   border: solid 3px #292f33;
   margin-bottom: 5vh;
-  margin-right: 30vh;
   margin-top: -2px;
+
+
+}
+@media only screen and (max-width: 990px) {
+  .event{
+    width: auto;
+  }
 }

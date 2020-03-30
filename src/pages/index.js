@@ -6,8 +6,6 @@ import Events from "../components/events"
 import Twitter from "../components/twitterFeed"
 import Team from "../components/team"
 import Issues from "../components/issues"
-import Carousel from "../components/carousel"
-import Team_members from "../components/team_members"
 
 // export default () => <div>Bil-Website First Commit (Leonidas Zoidis)</div>
 
@@ -40,7 +38,6 @@ export default () => (
           </div>
         </div>
       </div>
-      <Carousel />
       <div className="container content">
         <div class="container container-content">
           <h2 class="mb-5 font-weight-normal">
@@ -59,7 +56,6 @@ export default () => (
       </div>
       <div className="content bg-light">
         <h2 className="headings text-dark pt-5">Our Team</h2>
-        <Team_members />
         <Team />
       </div>
       <div className="content">
