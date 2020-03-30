@@ -65,6 +65,10 @@ export default () => (
       <div className="content">
         <h2 className="headings">Projects/Issues</h2>
         <Issues />
+        <br />
+        <a href="https://github.com/MartinGras95/issuestest/issues">
+          See More
+        </a>
       </div>
     </Layout>
   </div>
