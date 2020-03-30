@@ -1,7 +1,26 @@
 import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
+import { graphql, useStaticQuery, Link } from "gatsby"
 
 const Carousel = () => {
+
+    // Query to contentful to get events
+    const data = useStaticQuery(graphql`
+    query {
+      one: allContentfulEvent(sort: {fields: eventDate, order: ASC,}) {
+        edges {
+          node {
+            eventTitle
+            eventDate(formatString: "MMMM Do. YYYY")
+            slug
+            endDateDifference: eventEndDate(difference: "days")
+            endDate: eventEndDate(formatString: "MMMM Do. YYYY")
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <div class="carousel_container mx-auto">
       <div
@@ -19,96 +38,34 @@ const Carousel = () => {
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner ">
-          <div class="carousel-item active">
-            <div class="row justify-content-md-center">
-              <div class="col-3 col-sm-3 justify-content-md-center ">
-                <div class="card border-0">
-                  <img
-                    class="card-img-top"
-                    src="https://interactive-examples.mdn.mozilla.net/media/examples/grapefruit-slice-332-332.jpg"
-                    alt="Card image cap"
-                  ></img>
-                  <div class="card-body">
-                    <p class="card-text">Some important project</p>
-                    <button type="button" class="btn btn-primary">
-                      Primary
-                    </button>
+          {data.one.edges.map(edge => {
+            if(edge.node.endDateDifference < 0){
+              return(
+                <div class="carousel-item active">
+                  <div class="row justify-content-md-center">
+                    <div class="col-12 col-sm-3 justify-content-md-center ">
+                      <div class="card border-0">
+                        <img
+                          class="card-img-top"
+                          src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80/100px180"
+                          alt="Card image cap"
+                        ></img>
+                        <div class="card-body">
+                          <h5 class="card-title">{edge.node.eventTitle}</h5>
+                          <p class="card-text">{edge.node.eventDate} - {edge.node.endDate}</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                {/* <img
-                  class="d-block mx-auto img-fluid"
-                  src="https://interactive-examples.mdn.mozilla.net/media/examples/grapefruit-slice-332-332.jpg"
-                  alt="First slide"
-                ></img> */}
-              </div>
-              <div class="col-3 col-sm-3">
-                <img
-                  class="d-block mx-auto img-fluid"
-                  src="https://interactive-examples.mdn.mozilla.net/media/examples/grapefruit-slice-332-332.jpg"
-                  alt="First slide"
-                ></img>
-              </div>
-              <div class="col-3 col-sm-3">
-                <img
-                  class="d-block mx-auto img-fluid"
-                  src="https://interactive-examples.mdn.mozilla.net/media/examples/grapefruit-slice-332-332.jpg"
-                  alt="First slide"
-                ></img>
-              </div>
-            </div>
-          </div>
+              )
+              
+            }
+            
+          })}
 
-          <div class="carousel-item">
-            <div class="row justify-content-md-center">
-              <div class="col-3">
-                <img
-                  class="d-block mx-auto img-fluid"
-                  src="https://interactive-examples.mdn.mozilla.net/media/examples/grapefruit-slice-332-332.jpg"
-                  alt="First slide"
-                ></img>
-              </div>
-              <div class="col-3">
-                <img
-                  class="d-block mx-auto img-fluid"
-                  src="https://interactive-examples.mdn.mozilla.net/media/examples/grapefruit-slice-332-332.jpg"
-                  alt="First slide"
-                ></img>
-              </div>
-              <div class="col-3">
-                <img
-                  class="d-block mx-auto img-fluid"
-                  src="https://interactive-examples.mdn.mozilla.net/media/examples/grapefruit-slice-332-332.jpg"
-                  alt="First slide"
-                ></img>
-              </div>
-            </div>
-          </div>
 
-          <div class="carousel-item">
-            <div class="row justify-content-md-center">
-              <div class="col-3">
-                <img
-                  class="d-block mx-auto img-fluid"
-                  src="https://interactive-examples.mdn.mozilla.net/media/examples/grapefruit-slice-332-332.jpg"
-                  alt="First slide"
-                ></img>
-              </div>
-              <div class="col-3">
-                <img
-                  class="d-block mx-auto img-fluid"
-                  src="https://interactive-examples.mdn.mozilla.net/media/examples/grapefruit-slice-332-332.jpg"
-                  alt="First slide"
-                ></img>
-              </div>
-              <div class="col-3">
-                <img
-                  class="d-block mx-auto img-fluid"
-                  src="https://interactive-examples.mdn.mozilla.net/media/examples/grapefruit-slice-332-332.jpg"
-                  alt="First slide"
-                ></img>
-              </div>
-            </div>
-          </div>
+
         </div>
         <a
           class="carousel-control-prev"

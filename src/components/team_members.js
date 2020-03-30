@@ -1,7 +1,6 @@
 import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
-import { graphql, useStaticQuery, Link } from "gatsby"
-import Card from "react-bootstrap/Card"
+
 
 const Team_members = () => {
   return (

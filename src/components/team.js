@@ -1,7 +1,8 @@
 import React from "react"
 
 import { graphql, useStaticQuery, Link } from "gatsby"
-import Card from "react-bootstrap/Card"
+// import Card from "react-bootstrap/Card"
+import { Container, Row } from "react-bootstrap"
 import teamStyles from "./team.module.scss"
 
 const Team = () => {
@@ -25,55 +26,25 @@ const Team = () => {
   `)
 
   return (
-    <div class="container">
-      <div class="row justify-content-center mx-auto">
-        {/* <div class="col-md-12"> */}
-        <div className={teamStyles.team}>
-          {data.allContentfulTeamMember.edges.map(edge => {
-            return (
+    <Container>
+      <Row>
+        {data.allContentfulTeamMember.edges.map(edge => {
+          return (
+            <div class="col-md-3">
               <Link className={teamStyles.link} to={`/team/${edge.node.slug}`}>
-                <Card className={teamStyles.teamMember}>
-                  <Card.Img
-                    className={teamStyles.teamMemberPic}
-                    variant="top"
-                    src={edge.node.memberProfile.file.url}
-                  />
-                  <Card.Body>
-                    <Card.Title>{edge.node.memberName}</Card.Title>
-                    <Card.Text>{edge.node.memberTitle}</Card.Text>
-                  </Card.Body>
-                </Card>
+                <div class="card card_style">
+                  <img src={edge.node.memberProfile.file.url} class="card-img-top" alt="member"/>
+                  <div class="card-body">
+                    <h5 class="card-title text-dark">{edge.node.memberName}</h5>
+                    <p class="card-text text-dark">{edge.node.memberTitle}</p>
+                  </div>
+                </div>
               </Link>
-            )
-          })}
-        </div>
-        {/* </div> */}
-        {/* <div class="cold-md-3">
-          <div className={teamStyles.team}>
-            {data.allContentfulTeamMember.edges.map(edge => {
-              return (
-                <Link
-                  className={teamStyles.link}
-                  to={`/team/${edge.node.slug}`}
-                >
-                  <Card className={teamStyles.teamMember}>
-                    <Card.Img
-                      className={teamStyles.teamMemberPic}
-                      variant="top"
-                      src={edge.node.memberProfile.file.url}
-                    />
-                    <Card.Body>
-                      <Card.Title>{edge.node.memberName}</Card.Title>
-                      <Card.Text>{edge.node.memberTitle}</Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Link>
-              )
-            })}
-          </div>
-        </div> */}
-      </div>
-    </div>
+            </div>
+          )
+        })}
+      </Row>
+    </Container>
   )
 }
 

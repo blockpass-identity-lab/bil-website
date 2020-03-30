@@ -2,7 +2,7 @@ import React from 'react'
 
 import Layout from '../components/layout'
 import { graphql, useStaticQuery, Link } from "gatsby"
-import Card from "react-bootstrap/Card"
+import {Card, Row, Col, Container} from "react-bootstrap"
 
 
 const EventsPage = () => {
@@ -25,25 +25,32 @@ const EventsPage = () => {
 
     return (
         <Layout>
-            {data.allContentfulEvent.edges.map(edge=>{
+          <Container fluid>
+            <Row>
+              {data.allContentfulEvent.edges.map(edge => {
                 return(
-                    <Link to={`event/${edge.node.slug}`}>
-                        <Card style={{ width: "26rem" }}>
-                            <Card.Img
-                            variant="top"
-                            src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80/100px180"
-                            />
-                            <Card.Body>
-                            <Card.Title>{edge.node.eventTitle}</Card.Title>
-                            <Card.Text>
-                                {edge.node.eventDate} - {edge.node.eventEndDate}
-                            </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Link>
-                    )
+                  <Col>
+                  <Link to={`event/${edge.node.slug}`}>
+                    <Card style={{ width: "26rem", marginBottom: "2rem" }}>
+                        <Card.Img
+                        variant="top"
+                        src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80/100px180"
+                        />
+                        <Card.Body>
+                        <Card.Title>{edge.node.eventTitle}</Card.Title>
+                        <Card.Text>
+                            {edge.node.eventDate} - {edge.node.eventEndDate}
+                        </Card.Text>
+                        </Card.Body>
+                    </Card>
+                  </Link>
+                </Col>
+                )
+              })}
 
-            })}
+            </Row>
+          </Container>
+
         </Layout>
     )
 }
