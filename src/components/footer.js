@@ -8,13 +8,11 @@ const Footer = () => {
         <div class="col-md-3"></div>
         <div class="col-md-3">
           <p>
-            <i class="far fa-envelope"></i>
-            identity-lab@napier.ac.uk
             <a
               href="mailto:identity-lab@napier.ac.uk?Subject=Contact%20Us"
               target="_top"
             >
-              Send Mail
+            identity-lab@napier.ac.uk
             </a>
             <br></br>
             <br></br>

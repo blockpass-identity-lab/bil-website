@@ -16,7 +16,7 @@ export default () => (
       <div class="container-fluid mt-0 bg-dark text-light p-5 content mx-auto">
         <div class="row d-flex justify-content-center">
           <div class="col-12 mx-auto">
-            <h2>Blockpass Identity Lab</h2>
+            <h2 id="about">Blockpass Identity Lab</h2>
             <p class="font-weight-normal desc">
               <span class="font-weight-bold">Blockpass Identity Lab </span> is a
               collaboration between Blockpass IDN and Edinburgh Napier
@@ -25,13 +25,14 @@ export default () => (
               while further developing methods to protect consumer identity and
               the right of citizens to data privacy.
             </p>
+            <a href="/events">
             <button
               type="button"
               id="anchor_events"
               class="btn btn-lg btn-outline-primary cta_btn "
-            >
-              View events
+            >View Events
             </button>
+            </a>
             {/* <button type="button " class="btn btn-outline-dark cta_btn">
               Learn more
             </button> */}
@@ -54,11 +55,11 @@ export default () => (
         </div>
       </div>
       <div className="content bg-dark">
-        <h2 className="headings text-light pt-5">Our Team</h2>
+        <h2 id="team" className="headings text-light pt-5">Our Team</h2>
         <Team />
       </div>
       <div className="content">
-        <h2 className="headings">Projects</h2>
+        <h2 id="projects" className="headings">Projects</h2>
         <Issues />
         <br />
         <button
@@ -66,7 +67,7 @@ export default () => (
           id="anchor_events"
           class="btn btn-lg btn-outline-primary cta_btn seeMore"
         >
-          <a href="https://github.com/MartinGras95/issuestest/issues">
+          <a href="/issues">
             See More
           </a>
         </button>

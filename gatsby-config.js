@@ -9,6 +9,7 @@ module.exports = {
   // Plugins
   plugins: [
     "gatsby-plugin-sass",
+    `gatsby-plugin-smoothscroll`,
     // Contentful source plugin
     // This plugin allows this website to source data from contentful CMS
     // The spaceID and accessToken are exposed but will be hidden in an .env file in the future
@@ -43,8 +44,8 @@ module.exports = {
         },
         queries: [
           `{
-            repository(owner: "MartinGras95", name: "issuestest") {
-              issues(last: 20, states: OPEN) {
+            repository(owner: "BlockchainIdentityLab", name: "student-projects") {
+              issues(last: 20, states: OPEN) { 
                 edges {
                   node {
                     id
