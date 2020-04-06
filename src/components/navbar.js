@@ -1,5 +1,6 @@
 import React from "react"
 import { Navbar, Nav } from "react-bootstrap"
+import scrollTo from 'gatsby-plugin-smoothscroll'
 
 const navbar = () => {
   return (
@@ -9,10 +10,10 @@ const navbar = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav class="nav navbar ml-auto mr-5" role="navigation">
           <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#link2">About</Nav.Link>
-          <Nav.Link href="/events">Events</Nav.Link>
-          <Nav.Link href="#link4">Team</Nav.Link>
-          <Nav.Link href="#link5">Projects</Nav.Link>
+          <Nav.Link onClick={() => scrollTo('#about')}>About</Nav.Link>
+          <Nav.Link onClick={() => scrollTo('#events')}>Events</Nav.Link>
+          <Nav.Link onClick={() => scrollTo('#team')}>Team</Nav.Link>
+          <Nav.Link onClick={() => scrollTo('#projects')}>Projects</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
