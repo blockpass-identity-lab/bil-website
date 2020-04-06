@@ -41,8 +41,8 @@ export default () => (
       </div>
       <div className="container content">
         <div class="container container-content">
-          <h2 class="mb-5 font-weight-normal">
-            <a href="#anchor_events">Stay Updated</a>
+          <h2 class="mb-5 font-weight-normal" style={{color:"white"}}>
+            Stay Updated
           </h2>
           <div class="row">
             <div class="col-md-6 col-sm-12">
@@ -62,15 +62,15 @@ export default () => (
         <h2 id="projects" className="headings">Projects</h2>
         <Issues />
         <br />
+        <a href="/issues">
         <button
           type="button"
           id="anchor_events"
           class="btn btn-lg btn-outline-primary cta_btn seeMore"
-        >
-          <a href="/issues">
+        >  
             See More
-          </a>
         </button>
+        </a>
       </div>
     </Layout>
   </div>

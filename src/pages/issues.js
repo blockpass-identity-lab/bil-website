@@ -3,7 +3,6 @@ import React from "react"
 import Layout from "../components/layout"
 import { graphql, useStaticQuery } from "gatsby"
 import { Card,Row,Col,Container } from "react-bootstrap"
-import issuesStyles from "../components/issues.module.scss"
 
 export default () => {
 
