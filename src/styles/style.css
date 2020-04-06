@@ -108,5 +108,11 @@
 }
 
 #projects {
-  margin-top: 3.5em;
+  margin-top: 3.75em;
+}
+
+.desc {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+  line-height: 3em;
 }
