@@ -36,7 +36,7 @@ const Event = (props) => {
     }
 
     return(
-        <Layout>
+        <Layout white={true}>
             <div className={ eventStyles.container }>
                 <div className={ eventStyles.content }>
                     {/* grab and display contentful data here */}

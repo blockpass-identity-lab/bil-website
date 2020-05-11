@@ -52,7 +52,7 @@ const Member = ({data}) => {
     let {personalSite, bio, email, worktribe, twitter, githubProfile, memberProfile, memberName, linkedin} = data.contentfulTeamMember
 
     return(
-        <Layout>
+        <Layout white={true}>
             <div className={ memberStyles.container }>
                 <div className={ memberStyles.content }>
                     {/*Image */}
@@ -63,7 +63,7 @@ const Member = ({data}) => {
                     {/* grab and display contentful data here */}
                     <h1>{memberName}</h1>
                     {/* render rich text */}
-                    {documentToReactComponents(bio.json,options)}
+                    {bio && documentToReactComponents(bio.json,options)}
 
                     <Container fluid>
                         <Row className={ memberStyles.firstRow }>

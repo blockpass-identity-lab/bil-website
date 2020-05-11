@@ -95,7 +95,7 @@
 }
 .bg {
   background-color: #343a40;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: grid;
 }
 .seeMore {

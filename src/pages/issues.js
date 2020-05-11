@@ -24,7 +24,6 @@ export default () => {
     `)
 
     return (
-        <div className="bg">
             <Layout>
             <Container fluid>
                 <Row>
@@ -57,7 +56,6 @@ export default () => {
             </Container>
                
             </Layout>
-        </div>
         
     )
 }

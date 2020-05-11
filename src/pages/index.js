@@ -10,10 +10,9 @@ import {navigate, Link} from "gatsby"
 // export default () => <div>Bil-Website First Commit (Leonidas Zoidis)</div>
 
 export default () => (
-  <div class="bg">
     <Layout>
       <Header />
-      <div class="container-fluid mt-0 bg-dark text-light p-5 content mx-auto">
+      <div className="container-fluid mt-0 bg-dark text-light p-5 content mx-auto">
         <div class="row d-flex justify-content-center">
           <div class="col-12 mx-auto">
             <h2 id="about">Blockpass Identity Lab</h2>
@@ -64,5 +63,4 @@ export default () => (
         </a>
       </div>
     </Layout>
-  </div>
 )
