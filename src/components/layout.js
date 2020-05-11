@@ -9,7 +9,7 @@ const Layout = props => {
   const siteTitle = 'Blockpass Identity Lab'
   const siteDescription = 'A research lab focused on identity and privacy-preserving technologies based at Edinburgh Napier University'
   return (
-    <div>
+    <div className={props.white ? "bg-white" : "bg"}>
       <Helmet>
         <title>{siteTitle}</title>
         <meta name="description" content={siteDescription}/>
