@@ -6,38 +6,31 @@ import Events from "../components/events"
 import Twitter from "../components/twitterFeed"
 import Team from "../components/team"
 import Issues from "../components/issues"
-
+import {navigate, Link} from "gatsby"
 // export default () => <div>Bil-Website First Commit (Leonidas Zoidis)</div>
 
 export default () => (
-  <div class="bg-dark">
+  <div class="bg">
     <Layout>
       <Header />
       <div class="container-fluid mt-0 bg-dark text-light p-5 content mx-auto">
         <div class="row d-flex justify-content-center">
           <div class="col-12 mx-auto">
             <h2 id="about">Blockpass Identity Lab</h2>
-            <p class="font-weight-normal desc">
-              <span class="font-weight-bold">Blockpass Identity Lab </span> is a
-              collaboration between Blockpass IDN and Edinburgh Napier
-              University which was announced in April 2018. The initial scope of
-              the partnership is the creation of a pioneering new research lab,
-              while further developing methods to protect consumer identity and
-              the right of citizens to data privacy.
-            </p>
-            <a href="/events">
-            <button
-              type="button"
-              id="anchor_events"
-              class="btn btn-lg btn-outline-primary cta_btn "
-            >View Events
-            </button>
-            </a>
+            <h5 class="main-blurb">
+              A research lab based at Edinburgh Napier University led by <Link to="/team/bbuchanan">Professor Bill Buchanan</Link>. The lab was formed through a collaboration with Blockpass IDN and is focused on research areas of Cryptography, Identity, Privacy, Machine Learning and Distributed Ledger Technology.
+
+            </h5>
+
             {/* <button type="button " class="btn btn-outline-dark cta_btn">
               Learn more
             </button> */}
           </div>
         </div>
+      </div>
+      <div className="content bg-dark">
+        <h2 id="team" className="headings text-light pt-5">Our Team</h2>
+        <Team />
       </div>
       <div className="container content">
         <div class="container container-content">
@@ -47,6 +40,7 @@ export default () => (
           <div class="row">
             <div class="col-md-6 col-sm-12">
               <Events />
+
             </div>
             <div class="col-md-6 col-sm-12">
               <Twitter />
@@ -54,12 +48,9 @@ export default () => (
           </div>
         </div>
       </div>
-      <div className="content bg-dark">
-        <h2 id="team" className="headings text-light pt-5">Our Team</h2>
-        <Team />
-      </div>
+
       <div className="content">
-        <h2 id="projects" className="headings">Projects</h2>
+        <h2 id="projects" className="headings">Student Project Ideas</h2>
         <Issues />
         <br />
         <a href="/issues">
@@ -67,7 +58,7 @@ export default () => (
           type="button"
           id="anchor_events"
           class="btn btn-lg btn-outline-primary cta_btn seeMore"
-        >  
+        >
             See More
         </button>
         </a>

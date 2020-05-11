@@ -27,28 +27,31 @@ const Team = () => {
 
   return (
     <Container>
-      <Row>
-        {data.allContentfulTeamMember.edges.map(edge => {
-          return (
-            <div class="col-md-3">
-              <Link className={teamStyles.link} to={`/team/${edge.node.slug}`}>
-                <div class="card card_style">
-                  <img
-                    src={edge.node.memberProfile.file.url}
-                    class="card-img-top"
-                    alt="member"
-                  />
-                  <div class="card-body cardC">
-                    <h5 class="card-title text-light">
-                      {edge.node.memberName}
-                    </h5>
-                    <p class="card-text text-light">{edge.node.memberTitle}</p>
+      <Row className={teamStyles.team}>
+        {/*<div className={teamStyles.team}>*/}
+          {data.allContentfulTeamMember.edges.map(edge => {
+            return (
+              <div class={teamStyles.teamMember}>
+                <Link to={`/team/${edge.node.slug}`}>
+                  <div class="card">
+                    <img
+                      src={edge.node.memberProfile.file.url}
+                      class="card-img-top"
+                      alt="member"
+                    />
+                    {/*<div class="card-body cardC">*/}
+                    {/*<h5 class="card-title text-light">*/}
+                    {/*{edge.node.memberName}*/}
+                    {/*</h5>*/}
+                    {/*<p class="card-text text-light">{edge.node.memberTitle}</p>*/}
+                    {/*</div>*/}
                   </div>
-                </div>
-              </Link>
-            </div>
-          )
-        })}
+                </Link>
+              </div>
+            )
+          })}
+        {/*</div>*/}
+
       </Row>
     </Container>
   )

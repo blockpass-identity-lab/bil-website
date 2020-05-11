@@ -3,6 +3,9 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+require("dotenv").config({
+  path: `.env`,
+})
 
 module.exports = {
   /* Your site config here */
@@ -16,8 +19,8 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        spaceId: "9tsw91dqehj4",
-        accessToken: "ue76suCe3wMvf-G5XYCHNuE3-12kE2N6G63Nc-P8Edk"
+        spaceId: process.env.SPACE_ID,
+        accessToken: process.env.ACCESS_TOKEN
       },
     },
     {
@@ -33,7 +36,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-twitter`,
-    
+
     // Sourcing from github. (A temporary repository made by martin which contains 2 issues to be pulled)
     // Github
     {
@@ -44,7 +47,7 @@ module.exports = {
         },
         queries: [
           `{
-            repository(owner: "BlockchainIdentityLab", name: "student-projects") {
+            repository(owner: "blockpass-identity-lab", name: "student-projects") {
               issues(last: 20, states: OPEN) { 
                 edges {
                   node {

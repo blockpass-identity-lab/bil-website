@@ -20,9 +20,19 @@
 
 .image{
     width: 250px;
-   
+
 }
 
 .firstRow{
     margin-bottom: 1rem;
+
+    a {
+        padding: 10px;
+        color: black;
+
+        &:hover {
+            color: #aa0e36;
+        }
+    }
+
 }

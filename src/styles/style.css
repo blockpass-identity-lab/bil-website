@@ -50,10 +50,6 @@
 .cta_btn {
   margin: 5px;
 }
-.footer_container {
-  background-color: black;
-  border-top: 3px solid white;
-}
 .small_font {
   font-size: 10px;
   color: white;
@@ -78,6 +74,17 @@
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
+.footer-container {
+  position: relative;
+  bottom: 0px;
+  background-color: black;
+  border-top: 3px solid white;
+}
+.main-blurb {
+  padding: 20px 10%;
+  text-align: justify;
+}
+
 .card_style:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
@@ -88,6 +95,8 @@
 }
 .bg {
   background-color: #343a40;
+  min-height: 100vh;
+  display: grid;
 }
 .seeMore {
   margin-bottom: 10vh;

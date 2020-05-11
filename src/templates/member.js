@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { FaTwitter, FaEnvelope, FaLink, FaUniversity, FaGithub, FaLinkedin } from "react-icons/fa"
 
 
 // this module renders rich text from contentful to react components
@@ -28,13 +29,14 @@ export const query = graphql`
             worktribe
             githubProfile
             linkedin
+            personalSite
         }
     }
 `
 
 // Component
 
-const Member = (props) => {
+const Member = ({data}) => {
     const options = {
         // override how nodes are rendered
         renderNode: {
@@ -47,42 +49,45 @@ const Member = (props) => {
         }
     }
 
+    let {personalSite, bio, email, worktribe, twitter, githubProfile, memberProfile, memberName, linkedin} = data.contentfulTeamMember
+
     return(
         <Layout>
             <div className={ memberStyles.container }>
                 <div className={ memberStyles.content }>
                     {/*Image */}
-                    <Image 
+                    <Image
                     className={ memberStyles.image }
-                    src={props.data.contentfulTeamMember.memberProfile.file.url} 
+                    src={memberProfile.file.url}
                     />
                     {/* grab and display contentful data here */}
-                    <h1>{props.data.contentfulTeamMember.memberName}</h1>
+                    <h1>{memberName}</h1>
                     {/* render rich text */}
-                    <em>Bio: </em>
-                    {documentToReactComponents(props.data.contentfulTeamMember.bio.json,options)}
+                    {documentToReactComponents(bio.json,options)}
 
                     <Container fluid>
                         <Row className={ memberStyles.firstRow }>
-                            <Col>
-                                <em>Email</em> <br />
-                                {props.data.contentfulTeamMember.email}
-                            </Col>
-                            <Col>
-                                <em>Worktribe</em> <br />
-                                {props.data.contentfulTeamMember.worktribe}
-                            </Col>
+                          {email && <a href={"mailto:" + email}>
+                            <FaEnvelope size={32}/>
+                          </a>}
+                          {worktribe && <a target="_blank" href={worktribe}>
+                            <FaUniversity size={32}/>
+                          </a>}
+                          {personalSite && <a target="_blank" href={personalSite}>
+                            <FaLink size={32}/>
+                          </a>}
+                          {linkedin && <a target="_blank" href={linkedin}>
+                            <FaLinkedin size={32}/>
+                          </a>}
+                          {githubProfile && <a target="_blank" href={githubProfile}>
+                            <FaGithub size={32}/>
+                          </a>}
+                          {twitter && <a target="_blank" href={twitter}>
+                            <FaTwitter size={32}/>
+                          </a>}
+
                         </Row> <br />
-                        <Row>
-                            <Col>
-                                <em>Github</em> <br />
-                                {props.data.contentfulTeamMember.githubProfile}
-                            </Col>
-                            <Col>
-                                <em>Twitter</em> <br />
-                                {props.data.contentfulTeamMember.twitter}
-                            </Col>
-                        </Row>
+
                     </Container>
                 </div>
             </div>
