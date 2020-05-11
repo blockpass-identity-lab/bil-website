@@ -3,6 +3,8 @@ import React from "react"
 // importing components
 import Footer from "./footer"
 import Navbar from "./navbar"
+import Helmet from 'react-helmet'
+
 
 const Layout = props => {
   const siteTitle = 'Blockpass Identity Lab'
