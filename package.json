@@ -25,7 +25,7 @@
     "gatsby-plugin-sass": "^2.1.31",
     "gatsby-plugin-smoothscroll": "^1.1.0",
     "gatsby-plugin-twitter": "^2.1.21",
-    "gatsby-source-contentful": "^2.1.100",
+    "gatsby-source-contentful": "^8.9.1",
     "gatsby-source-github": "0.0.2",
     "graphql": "^14.6.0",
     "jquery": "^3.4.1",
