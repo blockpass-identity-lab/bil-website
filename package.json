@@ -20,7 +20,7 @@
     "debug": "^4.1.1",
     "dependencies": "0.0.1",
     "fund": "^1.0.0",
-    "gatsby": "^2.20.9",
+    "gatsby": "^4.25.7",
     "gatsby-plugin-manifest": "^2.2.48",
     "gatsby-plugin-sass": "^2.1.31",
     "gatsby-plugin-smoothscroll": "^1.1.0",
